@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>Traffic Dataset Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #333; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #eee; }
+    </style>
+</head>
+<body>
+<h1>Traffic Dataset Cleaned Report</h1>
+<h2>Overview</h2>
+<ul>
+  <li>File: <strong>traffic_dataset_clean.csv</strong> (CSV)</li>
+  <li>Rows: <strong>44503</strong></li>
+  <li>Columns: <strong>5</strong></li>
+</ul>
+<h2>Columns</h2>
+<table>
+<tr><th>Name</th><th>Inferred Type</th><th>Description</th></tr>
+<tr><td>DateTime</td><td>datetime</td><td>Timestamp of measurement (hourly)</td></tr>
+<tr><td>Junction</td><td>int</td><td>Location identifier (1-4)</td></tr>
+<tr><td>Vehicles</td><td>int</td><td>Hourly vehicle count</td></tr>
+<tr><td>ID</td><td>int</td><td>Unique row identifier</td></tr>
+<tr><td>Date</td><td>object</td><td>Date of measurement</td></tr>
+</table>
+<h2>Data Quality</h2>
+<ul>
+  <li>No missing values in any column.</li>
+  <li>DateTime column is in datetime format.</li>
+  <li>Outliers in 'Vehicles' column have been removed using the IQR method.</li>
+</ul>
+<h2>Statistics</h2>
+<table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Junction</th>
+      <th>Vehicles</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>44503.000000</td>
+      <td>44503.000000</td>
+      <td>4.450300e+04</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>2.272364</td>
+      <td>18.267892</td>
+      <td>2.016300e+10</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.943814</td>
+      <td>13.251979</td>
+      <td>5.946411e+06</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>2.015110e+10</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>2.000000</td>
+      <td>8.000000</td>
+      <td>2.016040e+10</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>2.000000</td>
+      <td>14.000000</td>
+      <td>2.016091e+10</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>3.000000</td>
+      <td>24.000000</td>
+      <td>2.017022e+10</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>4.000000</td>
+      <td>59.000000</td>
+      <td>2.017063e+10</td>
+    </tr>
+  </tbody>
+</table>
+<h2>First Impressions</h2>
+<p>The dataset is now cleaned and ready for more in-depth analysis. Outliers have been handled, and the data types are appropriate for further processing.</p>
+</body>
+</html>
